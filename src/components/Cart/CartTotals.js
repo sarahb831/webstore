@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom' // return to home page when cart is cleared
+import PayPalButton from './PayPal.js'
 
-export default function CartTotals({value}) {
+export default function CartTotals({value, history}) {
     const { cartSubTotal, cartTax, cartTotal, clearCart } = value
     return (
         <React.Fragment>
@@ -21,18 +22,22 @@ export default function CartTotals({value}) {
                             <h5>
                                 <span className='text-title'>
                                     subtotal :</span>
-                                    <strong>$ {cartSubTotal}</strong>
+                                    <strong>$ {cartSubTotal.toFixed(2)}</strong>
                             </h5>
                             <h5>
                                 <span className='text-title'>
                                     tax :</span>
-                                    <strong>$ {cartTax}</strong>
+                                    <strong>$ {cartTax.toFixed(2)}</strong>
                             </h5>
                             <h5>
                                 <span className='text-title'>
                                     total :</span>
-                                    <strong>$ {cartTotal}</strong>
+                                    <strong>$ {cartTotal.toFixed(2)}</strong>
                             </h5>
+                            <PayPalButton 
+                                total={cartTotal} 
+                                clearCart={clearCart} 
+                                history={history}/>
                     </div>
                 </div>
             </div>

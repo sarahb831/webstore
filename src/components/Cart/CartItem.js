@@ -7,22 +7,23 @@ export default function CartItem({item, value}) {
         
        
         <div className='row my-2 text-capitalize text-center'>
-            <div className='col-10 mx-auto col-lg-2'>
+            {/*</div><div className='col-10 mx-auto col-lg-2'>*/}
+            <div className='col-10 mx-auto mx-lg-0 col-lg-2'>
                 <img 
                     src={img} 
                     style={{width:'5rem', height:'5rem'}} 
                     className='img-fluid'
                     alt={title} />
             </div>
-            <div className='col-10 mx-auto col-lg-2'>
+            <div className='col-10 mx-auto mx-lg-0 col-lg-2'>
                 <span className='d-lg-none'>product : </span>
                 {title}
             </div>
-            <div className='col-10 mx-auto col-lg-2'>
+            <div className='col-10 mx-auto col-lg-2 mx-lg-0'>
                 <span className='d-lg-none'>price : </span>
-                    {price}
+                    ${price.toFixed(2)}
             </div>
-            <div className='col-10 mx-auto col-lg-2 my-2 my-lg-0'>
+            <div className='col-10 mx-auto col-lg-2 my-2 mx-lg-0 my-lg-0'>
                 <div className='d-flex justify-content-center'>
                     <div>
                         <span className='btn btn-black mx-1'
@@ -40,9 +41,9 @@ export default function CartItem({item, value}) {
                         </span> 
                     </div>
                 </div>
-                </div>'
+                </div>
                 {/* */}
-                <div className='col-10 mx-auto col-lg-2'>
+                <div className='col-10 mx-auto col-lg-2 mx-lg-0'>
                     <div 
                         className='cart-icon'
                         onClick={()=>removeItem(id)}
@@ -50,8 +51,8 @@ export default function CartItem({item, value}) {
                         <i className='fas fa-trash' />
                     </div>
                 </div>
-                <div className='col-10 mx-auto col-lg-2'>
-                <strong>item total : $ {total}</strong>
+                <div className='col-10 mx-auto col-lg-2 mx-lg-0'>
+                <strong>item total : $ {total.toFixed(2)}</strong>
             </div>
         </div>
     )
