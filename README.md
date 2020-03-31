@@ -1,6 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web store.  It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-It is a webstore build with React
 
 ## Available Scripts
 
