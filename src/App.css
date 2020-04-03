@@ -4,6 +4,9 @@
   --mainWhite:#f3f3f3;
   --mainDark:#232528;
   --mainYellow:#ffa400;
+  --mainGreen: #004d00;
+  --darkBlue: #00004d;
+  --darkRed: #4d0000;
 }
 
 
@@ -23,7 +26,7 @@ body {
 }
 
 .text-bright {
-  color: var(--lightBlue);
+  color: var(--darkBlue);
 }
 
 .btn-black {

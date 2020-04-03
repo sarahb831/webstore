@@ -9,6 +9,7 @@ export default class Product extends Component {
         // handle empty items
         if (this.props && this.props.product) {
             const {id, title, img, price, inCart} = this.props.product
+            
             return (
                 
                 <ProductWrapper className='col-9 mx-auto col-md-6 col-lg-3
@@ -17,11 +18,12 @@ export default class Product extends Component {
                         <ProductConsumer>
                             {value => (
                                 <div 
-                                    className='img-container p-5' 
+                                    className={this.props.product.rotate ? 'img-container p-5 rotate' : 'img-container p-5'}
                                     onClick={()=>
                                         value.handleDetail(id)}>
                                     <Link to='/details'>
-                                        <img src={img} alt='product' className='card-img-top' />
+                                        <img src={img} alt='product' 
+                                        className={this.props.product.rotate ? 'card-img-top rotate' : 'card-img-top'} />
                                     </Link>
                                     <button className='cart-btn' 
                                         disabled={inCart? true : false}
@@ -31,7 +33,7 @@ export default class Product extends Component {
                                         }} >
                                             {inCart ? (<p className='text-capitalize mb-0' disabled>
                                             in cart</p>) 
-                                            : (<i className='fas fa-cart-plus'/> )} 
+                                            : (<i className='fas fa-truck-pickup'/> )} 
                                     </button>
                                 </div>
                         )}
@@ -78,18 +80,27 @@ const ProductWrapper = styled.div`
         overflow: hidden;
     }
 
+    .rotate {
+        transform: rotate(90deg);
+        transition:  transform: 0;
+    }
+
     .card-img-top {
+        max-height: 175px;
+        width: auto;
         transition: all 1s linear;
     }
+
     .img-container:hover .card-img-top {
         transform: scale(1.2);
     }
+
     .cart-btn {
         position: absolute;
         bottom: 0;
         right: 0;
         padding: 0.2rem 0.4rem;
-        background: var(--lightBlue);
+        background: var(--darkBlue);
         border: none;
         color: var(--mainWhite);
         font-size: 1.4rem;
