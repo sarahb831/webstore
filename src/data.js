@@ -52,12 +52,12 @@ export const storeProducts = [
   },
   {
     id: 6,
-    title: "Bessie",
-    img: "img/bessie.jpg",
+    title: "Pinkie",
+    img: "img/pinkie.jpg",
     price: 10,
-    company: "Best In Show Lawns",
+    company: "Grand Champion Grasses",
     info:
-      "When you want your lawn to win Best In Show, use Bessie.",
+      "For grand champion grass, use Pinkie.",
     inCart: false,
     count: 0,
     total: 0
