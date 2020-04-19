@@ -52,7 +52,7 @@ const NavWrapper = styled.nav`
     top: 0;
 
     a {
-        width: 10%;
+        width: 40px;
     }
     .cart-link {
         width: fit-content;
