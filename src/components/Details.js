@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom'
 import { ButtonContainer } from './Button'
 
 export default class Details extends Component {
+    componentDidMount() {
+        window.scrollTo(0,0)
+    }
     render() {
-        const cart = true
+        //const cart = true
         return (
             <ProductConsumer>
                 {(value)=>{
                     const { id, company, img, info, price, title, inCart } = value.detailProduct
                     return(
-                        <div className='container py-5'>
+                        <div className='container py-5 mt-4'>
                             {/* title */}
                             <div className='row'>
                                 <div className='col-10 mx-auto text-center text-slanted text-blue my-5'>
@@ -42,7 +45,7 @@ export default class Details extends Component {
                                     </p>
                                     <p className='text-muted lead'>{info}</p>
                                     {/* buttons */}
-                                    <div>
+                                    <div className='text-center'>
                                         <Link to='/'>
                                             <ButtonContainer>back to mowers</ButtonContainer>
                                         </Link>

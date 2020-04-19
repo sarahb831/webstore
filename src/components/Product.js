@@ -60,8 +60,12 @@ const ProductWrapper = styled.div`
     .card {
         border-color: transparent;
         transition: all 1s linear;
+        height: 260px; /* new */
     }
     .card-footer {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
         background: transparent;
         border-top: transparent;
         transiton: all 1s linear;
@@ -86,7 +90,12 @@ const ProductWrapper = styled.div`
     }
 
     .card-img-top {
-        max-height: 175px;
+        display: block;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 100%;
+        /* max-height: 175px; */
         width: auto;
         transition: all 1s linear;
     }
@@ -97,7 +106,7 @@ const ProductWrapper = styled.div`
 
     .cart-btn {
         position: absolute;
-        bottom: 0;
+        bottom: 50px;
         right: 0;
         padding: 0.2rem 0.4rem;
         background: var(--darkBlue);

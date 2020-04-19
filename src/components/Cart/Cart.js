@@ -8,6 +8,9 @@ import { ProductConsumer } from '../../context'
 
 
 export default class Details extends Component {
+    componentDidMount() {
+        window.scrollTo(0,0)
+    }
     render() {
         return (
            <section>
