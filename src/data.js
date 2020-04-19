@@ -65,7 +65,7 @@ export const storeProducts = [
   {
     id: 7,
     title: "Ruth",
-    img: "img/ruth.jpg",
+    img: "img/ruth2.jpg",
     price: 17,
     company: "Home Run Fields",
     info:
